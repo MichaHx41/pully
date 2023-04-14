@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ secrets.FLAG }} > /home/runner/test.txt
+      - run: echo ${{ secrets.FLAG }}
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
