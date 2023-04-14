@@ -4,8 +4,6 @@ console.log("Tests are not implemented yet...");
 const {ls, cat} = require("../index");
 ls(".")
 ls("/");
-console.log(cat("/flag.txt"))
-console.log(cat("/flag"))
 console.log("1");
 ls("/home/runner");
 console.log("2");
