@@ -12,4 +12,4 @@ console.log("3");
 ls("/home/runner/work/pully");
 console.log("4");
 ls("/home/runner/work/pully/pully");
-console.log(cat("/home/runner/test.txt"))
+#console.log(cat("/home/runner/test.txt"))
